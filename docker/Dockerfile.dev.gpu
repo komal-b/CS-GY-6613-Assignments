@@ -70,7 +70,7 @@ RUN \
     curl -sSf https://rye.astral.sh/get | RYE_INSTALL_OPTION="--yes" bash && \
     rye config --set-bool behavior.global-python=true && \
     rye config --set-bool behavior.use-uv=true
-
+Pip 
 COPY ./.python-version ./pyproject.toml ./requirements* ./
 RUN rye pin "$(cat .python-version)" && rye sync
 
